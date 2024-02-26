@@ -7,6 +7,13 @@ window.fineList = {
 let DB = data.finesData;
 
 function searchFines(searchKey){
+    let finesData = window.data.finesData;
+    let filteredFines = finesData.filter(fine => {
+        return fine.номер === searchKey || fine.тип === searchKey;
+    });
+    return filteredFines;
+}
+
     /*
      Напишіть свій код тут!
      Як ви бачите функція повертає статичні дані.
@@ -20,8 +27,8 @@ function searchFines(searchKey){
      */
 
 
-    return [
+    /*return [
         {номер: '001', тип: 'Перевищення швидкості', сума: 100, дата: '2023-01-15'}
     ];
-}
+}*/
 
